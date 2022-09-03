@@ -1,4 +1,7 @@
-/*
+/* This software or document includes material derived from
+ * Example Disclosure Navigation Menu with Top-Level Links at
+ * https://w3c.github.io/aria-practices/examples/disclosure/disclosure-navigation-hybrid.html. 
+ * Copyright © 2022 W3C® (MIT, ERCIM, Keio, Beihang).
  *   This content is licensed according to the W3C Software License at
  *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
  *
