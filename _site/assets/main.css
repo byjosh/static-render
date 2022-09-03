@@ -269,7 +269,7 @@ header > h1 { line-height: 1.5; font-weight: 300; }
 * https://w3c.github.io/aria-practices/examples/disclosure/disclosure-navigation-hybrid.html
 * Copyright © 2022 W3C® (MIT, ERCIM, Keio, Beihang). */
 /* line 16, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-body { --scroll: 0rem; height: 100vh; display: grid; grid-template-rows: auto 1fr auto; grid-template-columns: [full-start] minmax(1rem, 1fr) [main-start] minmax(0, 52rem) [main-end] minmax(1rem, 1fr) [full-end]; }
+body { --scroll: 0rem; height: 100vh; display: grid; grid-template-rows: auto 1fr auto; grid-template-columns: [full-start] minmax(1rem, 1fr) [main-start] minmax(0, 72rem) [main-end] minmax(1rem, 1fr) [full-end]; }
 
 /* line 26, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 body > * { grid-column: full; padding: 2rem 1rem; }
@@ -306,40 +306,43 @@ header > nav ul li a, header > nav ul li a:visited { color: white; text-decorati
 header > nav ul li a:hover { color: white; }
 
 /* line 113, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-main { width: 100%; max-width: 52rem; margin-right: auto; margin-left: auto; grid-column: main; padding-top: 8rem; padding-bottom: 8rem; }
+main { width: 100%; max-width: 152rem; margin-right: auto; margin-left: auto; grid-column: main; padding-top: 8rem; padding-bottom: 8rem; }
 @media screen and (min-width: 992px) { /* line 113, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
   main { align-content: start; } }
 
-@supports (display: grid) { /* line 131, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 128, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+main.full { grid-column: full; }
+
+@supports (display: grid) { /* line 135, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
   main { width: auto; max-width: 100%; } }
-/* line 139, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-html[data-current="blog"] main > section ul li { padding: 2rem 0; border-bottom: 0.05em solid #e6e6e6; }
 /* line 143, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+html[data-current="blog"] main > section ul li { padding: 2rem 0; border-bottom: 0.05em solid #e6e6e6; }
+/* line 147, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 html[data-current="blog"] main > section ul li p { padding-bottom: 0; }
 
-/* line 150, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 154, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 nav[aria-label="Adjacent Posts"] { padding: 4rem 0; }
-/* line 153, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 157, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 nav[aria-label="Adjacent Posts"] ul { display: flex; }
-/* line 156, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-nav[aria-label="Adjacent Posts"] ul li { flex: 0 0 50%; width: auto; }
 /* line 160, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+nav[aria-label="Adjacent Posts"] ul li { flex: 0 0 50%; width: auto; }
+/* line 164, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 nav[aria-label="Adjacent Posts"] ul li:nth-child(2) { text-align: right; }
 
-/* line 168, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 172, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 html[data-current="contact"] main > form { display: grid; }
-/* line 171, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-html[data-current="contact"] main > form label { display: none; }
 /* line 175, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+html[data-current="contact"] main > form label { display: none; }
+/* line 179, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 html[data-current="contact"] main > form input, html[data-current="contact"] main > form textarea { width: 100%; padding: 1rem; margin-bottom: 2rem; }
-/* line 182, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 186, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 html[data-current="contact"] main > form button { width: 100%; }
 
-@supports (display: grid) { /* line 191, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+@supports (display: grid) { /* line 195, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
   html[data-current="contact"] main > form input, html[data-current="contact"] main > form textarea, html[data-current="contact"] main > form button { width: auto; max-width: none; } }
-/* line 200, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 204, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 footer { grid-column: full; display: grid; grid-template-columns: [full-start] minmax(1rem, 1fr) [main-start] minmax(0, 50rem) [main-end] minmax(1rem, 1fr) [full-end]; background-color: #f3f3f3; }
-/* line 207, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 211, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 footer > small { grid-column: main; }
 
 /* Nav styles 
@@ -353,205 +356,208 @@ nav ul li a:focus~ul { display: flex; margin-left: auto;
 a:focus { border: 1px dotted grey;
 }
 */
-/* line 233, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 237, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav noscript + button[aria-expanded="true"] { background: #013570; }
 
-/* line 238, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 242, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav noscript + button[aria-expanded="true"]::after { content: ""; align-items: center; border-bottom: 2px solid white; border-right: 2px solid white; height: 0.5em; width: 0.5em; transform: rotate(45deg); }
 
-/* line 249, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 253, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav noscript + button[aria-expanded="true"]:hover, .disclosure-nav noscript + button[aria-expanded="true"]:focus { background: #A1DDF0; }
 
-/* line 254, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 258, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .with-js .disclosure-nav noscript + button[aria-expanded="true"]:hover, .with-js .disclosure-nav noscript + button[aria-expanded="true"]:focus { background-color: #A1DDF0; color: #013570; }
 
-/* line 261, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 265, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .with-js .disclosure-nav li:focus-within noscript + button[aria-expanded="true"]:hover::after, .with-js .disclosure-nav li:focus-within noscript + button[aria-expanded="true"]:focus::after, .with-js .disclosure-nav li:focus-within noscript + button[aria-expanded="true"]::after { border-bottom: 2px solid #013570; border-right: 2px solid #013570; }
 
-/* line 270, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 274, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav { background-color: #013570; display: flex; list-style-type: none; padding: 0; margin: 0; flex-direction: column; }
-/* line 278, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 282, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav li a:focus { outline: 2px dotted lightgray; }
 
-/* line 283, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 287, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav ul { background-color: #007FAD; border: 0; border-radius: 0 0px 4px 4px; display: flex; list-style-type: none; margin: 0; padding: 0; position: absolute; top: 100%; flex-direction: column; z-index: 20; box-shadow: 0px 0px 30px #013570; width: 100%; align-items: center; }
-/* line 299, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 303, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav ul li { width: 100%; text-align: center; }
 
-@media screen and (min-width: 992px) { /* line 307, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+@media screen and (min-width: 992px) { /* line 311, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
   .disclosure-nav { flex-direction: row; } }
-/* line 312, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 316, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav li { margin: 0; display: unset; align-items: center; }
-/* line 317, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 321, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav li a { padding: 1rem; }
 
-/* line 323, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 327, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav > li { display: flex; position: relative; }
 
-/* line 328, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 332, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav ul a { border: 0; color: white; display: inline-block; margin: 0; padding: 0.5em 1em; text-decoration: none; width: 100%; }
 
-/* line 338, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 342, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav ul a:hover, .disclosure-nav ul a:focus { background-color: #A1DDF0; margin-bottom: 0; text-decoration: none; color: #013570; width: 100%; margin: 0; margin-left: 0; }
 
-/* line 349, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 353, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav ul a:focus { outline: 2px dotted gray; position: relative; }
 
-/* line 355, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 359, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav button, .disclosure-nav .main-link { align-items: center; background-color: transparent; border: 0px solid transparent; /* border-right-color: #ccc; */ display: flex; /* padding: 1em; */ padding: 0 0.5em 0 0.5em; outline: 0px dotted lightgrey; }
 
-/* line 368, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 372, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav .main-link { border-right-color: transparent; font-weight: 600; }
 
-/* line 373, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 377, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav .main-link:focus, .disclosure-nav .main-link:hover { background-color: #A1DDF0; color: #013570; border-radius: 2px; }
 
-/* line 380, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 384, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav button::after { content: ""; border-bottom: 1px solid white; border-right: 1px solid white; height: 0.5em; margin-left: 0.75em; width: 0.5em; transform: rotate(45deg); }
 
-/* line 390, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 394, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav .main-link + button::after { margin-left: 0; }
 
-/* line 395, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 399, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav .main-link:focus, .disclosure-nav .button:focus { border-color: transparent; outline: 2px dotted lightgrey; position: relative; }
 
-/* line 402, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 406, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav button { background-color: transparent; transition: 20ms background-color linear 0s; }
 
-/* line 407, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 411, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav button[aria-expanded="false"] { background-color: #013570; }
 
-/* line 411, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 415, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav button:hover, .disclosure-nav button:focus { background-color: #A1DDF0; color: #013570; border-radius: 2px; }
 
-/* line 418, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 422, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav button:hover { outline-width: 2px; }
 
-/* line 422, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 426, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav button:focus { outline-width: 2px; outline-color: #013570; transition: outline-color 4s linear; }
 
-/* line 428, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 432, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .with-js .disclosure-nav button[aria-expanded="true"] { background-color: #007FAD; border-bottom-color: #013570; border-right-color: #013570; color: white; border-radius: 2px 2px 0 0; }
 
-/* line 440, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 444, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav button:hover::after, .disclosure-nav button[aria-expanded="true"]::after { border-bottom: 2px solid #013570; border-right: 2px solid #013570; }
 
-/* line 448, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 452, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav ul { margin-left: -10000px; transition-property: margin-left; transition-duration: 0ms; transition-delay: 0s; }
 
-/* line 455, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 459, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav li > button:focus + ul, .disclosure-nav li > button:hover + ul, .disclosure-nav li > button + ul:hover, .disclosure-nav li > button + ul:focus { margin-left: 0; }
 
-/* line 462, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 466, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 noscript + li > ul:hover, noscript + li > ul:focus { margin-left: -0.25em; }
 
-/* line 468, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 472, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav button[aria-expanded="true"] + ul:focus-within { margin-left: 0px; }
 
 /* show on focus for skip to content link */
-/* line 476, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 480, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .show-on-focus { position: absolute; width: 1px; height: 1px; margin: 0; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); top: 0; left: 0; }
 
-/* line 489, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 493, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 a.show-on-focus:focus { width: auto; height: auto; clip: auto; overflow: visible; }
 
-/* line 496, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 500, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 a:focus { outline: 2px dotted grey; color: #007FAD; }
 
 /* to help alignment when no text */
-/* line 502, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 506, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 button.menu-button-no-text::after { margin-left: 0px; margin-top: 0.5em; margin-bottom: 0.5em; width: 0.5em; }
 
 /* Minima themes for menu */
-/* line 512, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 516, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .site-nav { position: absolute; top: 9px; right: 30px; background-color: #013570; border: none; border-radius: 5px; }
-/* line 521, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 525, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .site-nav .nav-trigger { display: block; margin-left: -10000px; height: 0px; }
-/* line 528, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-.site-nav #nav-trigger:focus + label { outline: 1px solid #A1DDF0; }
 /* line 532, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+.site-nav #nav-trigger:focus + label { outline: 1px solid #A1DDF0; }
+/* line 536, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .site-nav .menu-icon { float: right; width: 36px; height: 26px; line-height: 0; padding-top: 10px; text-align: center; }
-/* line 540, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 544, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .site-nav .menu-icon > svg path { fill: #A1DDF0; }
-/* line 545, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 549, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .site-nav label[for="nav-trigger"] { display: block; float: right; width: 36px; height: 36px; z-index: 2; cursor: pointer; }
-/* line 554, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 558, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .site-nav input ~ .trigger { clear: both; display: none; }
-/* line 559, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 563, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .site-nav input:checked ~ .trigger { display: block; padding-bottom: 5px; }
-/* line 564, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 568, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .site-nav .page-link { color: yellow; line-height: 1.5; display: block; padding: 5px 10px; margin-left: 20px; }
-/* line 571, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 575, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .site-nav .page-link:not(:last-child) { margin-right: 0; }
-@media screen and (min-width: 992px) { /* line 512, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+@media screen and (min-width: 992px) { /* line 516, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
   .site-nav { position: static; float: right; border: none; background-color: inherit; }
-  /* line 584, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-  .site-nav label[for="nav-trigger"] { display: none; }
   /* line 588, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-  .site-nav .nav-trigger { display: none; }
+  .site-nav label[for="nav-trigger"] { display: none; }
   /* line 592, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-  .site-nav .menu-icon { display: none; }
+  .site-nav .nav-trigger { display: none; }
   /* line 596, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-  .site-nav input ~ .trigger { display: block; }
+  .site-nav .menu-icon { display: none; }
   /* line 600, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-  .site-nav .page-link { display: inline; padding: 0; margin-left: auto; }
+  .site-nav input ~ .trigger { display: block; }
   /* line 604, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+  .site-nav .page-link { display: inline; padding: 0; margin-left: auto; }
+  /* line 608, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
   .site-nav .page-link:not(:last-child) { margin-right: 20px; } }
 
 /* header>h1 { display: flex;
 } */
-/* line 618, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 622, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 header { box-shadow: #007FAD 0px 0px 30px; position: fixed; top: 0px; padding: 2rem; width: 100%; padding-top: calc(1.5rem - var(--scroll)); padding-bottom: calc(2rem - var(--scroll)); }
 
-/* line 628, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 632, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 main { margin-top: 8rem; padding-top: 2rem; padding-bottom: 2rem; }
 
-@media screen and (min-width: 480px) { /* line 636, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+@media screen and (min-width: 480px) { /* line 640, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
   main { margin-top: 4rem; padding-top: 4rem; padding-bottom: 4rem; } }
-/* line 647, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 651, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .slick-prev::before, .slick-next::before { color: #013570 !important; z-index: 100 !important; }
 
-/* line 653, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 657, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .slick-list { z-index: -10 !important; }
 
-/* line 657, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 661, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .photos { position: relative; margin-left: auto; margin-right: auto; z-index: auto; }
 
-/* line 665, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 669, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .slick-list img { border-radius: 4px; padding: 2px; }
 
-/* line 670, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 674, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .slick-slide figcaption:not(:empty) { bottom: 30px; color: white; background-color: rgba(0, 0, 0, 0.5); width: calc(100% - 4px); margin-left: 2px; padding-left: 4px; text-align: center; /* following is to hide from screen readers and is tested for layout shifts */ width: 1px; height: 1px; overflow: hidden; }
 
-/* line 684, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 688, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .slick-slide:hover figcaption:not(:empty) { position: relative; width: calc(100% - 4px); height: max-content; bottom: 30px; margin-bottom: -30px; overflow: visible; }
 
-/* line 696, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-summary { display: list-item; }
 /* line 700, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+summary { display: list-item; }
+/* line 704, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 summary h1, summary h2, summary h3, summary h4, summary h5 { display: inline-block; }
 
-/* line 710, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 714, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .photo-grid { display: grid; grid-template-columns: 1fr; column-gap: 10px; row-gap: 10px; }
 
-@media screen and (min-width: 768px) { /* line 719, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+@media screen and (min-width: 768px) { /* line 723, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
   .photo-grid { grid-template-columns: 1fr 1fr; } }
-@media screen and (min-width: 992px) { /* line 726, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+@media screen and (min-width: 992px) { /* line 730, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
   .photo-grid { grid-template-columns: 1fr 1fr 1fr; } }
-/* line 732, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 736, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 ol { list-style-type: decimal; list-style-position: inside; }
 
-/* line 737, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-ul { list-style-type: disc; list-style-position: inside; }
-
-/* line 743, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-html[data-current="about"] ul { list-style: cjk-decimal; }
+/* line 741, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+ul { list-style-type: disc; }
 
 /* line 747, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+html[data-current="about"] ul { list-style: cjk-decimal; }
+
+/* line 751, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 li > ul, li > ul > li > ul { margin-left: 40px; }
 
-/* line 752, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 756, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .tocskiplink { position: absolute; margin-left: -10000px; }
 
-/* line 757, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 761, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 h2.toc { font-size: 2rem; padding-bottom: 1rem; }
+
+/* line 768, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+.blogroll > li h2, .blogroll > li h3, .blogroll > li h4 { padding-top: 0; }
