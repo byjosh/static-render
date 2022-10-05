@@ -217,32 +217,32 @@ html { font-size: 62.5%; }
   html { font-size: 87.5%; } }
 
 /* line 20, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
-body { color: #282828; font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue; line-height: 1.5; font-weight: 300; font-style: normal; font-variant: normal; font-size: 1.2rem; }
+body { color: #282828; font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue; line-height: 1.5; font-weight: 300; font-style: normal; font-variant: normal; font-size: 1.6rem; }
 
 /* line 30, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
 h1, h2, h3, h4, h5, h6, p, figure, time, ul, ol { padding-bottom: 1rem; }
 
 /* line 44, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
-p { padding-top: 1rem; }
+p { padding-top: 2rem; }
 
 /* line 48, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
-h1, h2, h3, h4, h5, h6, figure { padding-top: 1rem; }
+h1, h2, h3, h4, h5, h6, figure { padding-top: 2rem; }
 /* line 57, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
-p + h1, figure + h1, p + h2, figure + h2, p + h3, figure + h3, p + h4, figure + h4, p + h5, figure + h5, p + h6, figure + h6, p + figure, figure + figure { padding-top: 1rem; }
+p + h1, figure + h1, p + h2, figure + h2, p + h3, figure + h3, p + h4, figure + h4, p + h5, figure + h5, p + h6, figure + h6, p + figure, figure + figure { padding-top: 2rem; }
 
 /* line 64, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
-p.intro { font-size: 1.6rem; color: #8e8e8e; padding-bottom: 2rem; }
+p.intro { font-size: 2.4rem; color: #8e8e8e; padding-bottom: 4rem; }
 @media screen and (min-width: 768px) { /* line 64, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
-  p.intro { padding-bottom: 2rem; } }
+  p.intro { padding-bottom: 4rem; } }
 
 /* line 74, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
 h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: 1.1538461538; }
 
 /* line 84, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
-h2 { font-size: 1.5rem; padding-bottom: 1rem; }
+h2 { font-size: 2.2rem; padding-bottom: 3rem; }
 
 /* line 89, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
-h3 { font-size: 1.35rem; }
+h3 { font-size: 1.7rem; }
 
 /* line 93, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
 code { font-family: Courier, monospace; font-size: 1.2rem; color: #282828; }
@@ -314,7 +314,7 @@ main { width: 100%; max-width: 152rem; margin-right: auto; margin-left: auto; gr
 main.full { grid-column: full; }
 
 @supports (display: grid) { /* line 135, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-  main { width: 100%; max-width: 100%; } }
+  main { width: auto; max-width: 100%; } }
 /* line 143, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 html[data-current="blog"] main > section ul li { padding: 2rem 0; border-bottom: 0.05em solid #e6e6e6; }
 /* line 147, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
@@ -557,13 +557,10 @@ li > ul, li > ul > li > ul { margin-left: 40px; }
 .tocskiplink { position: absolute; margin-left: -10000px; }
 
 /* line 761, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-h2.toc { font-size: 1.5rem; padding-bottom: 1rem; }
+h2.toc { font-size: 2rem; padding-bottom: 1rem; }
 
 /* line 768, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .blogroll > li h2, .blogroll > li h3, .blogroll > li h4 { padding-top: 0; }
 
 /* line 775, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-blockquote { font-family: Courier, monospace; font-size: 1.2rem; color: #282828; background-color: #f3f3f3; padding: 0.2rem 0.8rem; }
-
-/* line 783, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-.totop { font-size: 1rem; padding-top: 1rem; margin-bottom: 2rem; }
+blockquote { font-family: Courier, monospace; font-size: 1.2rem; color: #282828; background-color: #f3f3f3; padding: 0.2rem 0.4rem; }
