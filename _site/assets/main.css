@@ -507,63 +507,63 @@ button.menu-button-no-text::after { margin-left: 0px; margin-top: 0.5em; margin-
 header { box-shadow: #007FAD 0px 0px 30px; position: fixed; top: 0px; padding: 2rem; width: 100%; padding-top: calc(1.5rem - var(--scroll)); padding-bottom: calc(2rem - var(--scroll)); }
 
 /* line 632, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-main { margin-top: 8rem; padding-top: 2rem; padding-bottom: 2rem; }
+main { margin-top: 8rem; padding-top: 2rem; padding-bottom: 2rem; padding-left: 40px; padding-right: 40px; }
 
-@media screen and (min-width: 480px) { /* line 640, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+@media screen and (min-width: 480px) { /* line 642, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
   main { margin-top: 4rem; padding-top: 4rem; padding-bottom: 4rem; } }
-/* line 651, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 653, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .slick-prev::before, .slick-next::before { color: #013570 !important; z-index: 100 !important; }
 
-/* line 657, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 659, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .slick-list { z-index: -10 !important; }
 
-/* line 661, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 663, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .photos { position: relative; margin-left: auto; margin-right: auto; z-index: auto; }
 
-/* line 669, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 671, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .slick-list img { border-radius: 4px; padding: 2px; }
 
-/* line 674, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 676, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .slick-slide figcaption:not(:empty) { bottom: 30px; color: white; background-color: rgba(0, 0, 0, 0.5); width: calc(100% - 4px); margin-left: 2px; padding-left: 4px; text-align: center; /* following is to hide from screen readers and is tested for layout shifts */ width: 1px; height: 1px; overflow: hidden; }
 
-/* line 688, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 690, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .slick-slide:hover figcaption:not(:empty) { position: relative; width: calc(100% - 4px); height: max-content; bottom: 30px; margin-bottom: -30px; overflow: visible; }
 
-/* line 700, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 702, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 summary { display: list-item; }
-/* line 704, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 706, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 summary h1, summary h2, summary h3, summary h4, summary h5 { display: inline-block; }
 
-/* line 714, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 716, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .photo-grid { display: grid; grid-template-columns: 1fr; column-gap: 10px; row-gap: 10px; }
 
-@media screen and (min-width: 768px) { /* line 723, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+@media screen and (min-width: 768px) { /* line 725, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
   .photo-grid { grid-template-columns: 1fr 1fr; } }
-@media screen and (min-width: 992px) { /* line 730, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+@media screen and (min-width: 992px) { /* line 732, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
   .photo-grid { grid-template-columns: 1fr 1fr 1fr; } }
-/* line 736, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 738, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 ol { list-style-type: decimal; list-style-position: inside; }
 
-/* line 741, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 743, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 ul { list-style-type: disc; }
 
-/* line 747, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 749, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 html[data-current="about"] ul { list-style: cjk-decimal; }
 
-/* line 751, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 753, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 li > ul, li > ul > li > ul { margin-left: 40px; }
 
-/* line 756, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 758, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .tocskiplink { position: absolute; margin-left: -10000px; }
 
-/* line 761, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 763, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 h2.toc { font-size: 1.5rem; padding-bottom: 1rem; }
 
-/* line 768, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 770, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .blogroll > li h2, .blogroll > li h3, .blogroll > li h4 { padding-top: 0; }
 
-/* line 775, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 777, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 blockquote { font-family: Courier, monospace; font-size: 1.2rem; color: #282828; background-color: #f3f3f3; padding: 0.2rem 0.8rem; }
 
-/* line 783, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 785, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .totop { font-size: 1rem; padding-top: 1rem; margin-bottom: 2rem; }
