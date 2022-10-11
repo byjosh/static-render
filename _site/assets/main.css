@@ -367,7 +367,7 @@ a:focus { border: 1px dotted grey;
 .with-js .disclosure-nav noscript + button[aria-expanded="true"]:hover, .with-js .disclosure-nav noscript + button[aria-expanded="true"]:focus { background-color: #A1DDF0; color: #013570; }
 
 /* line 269, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-.with-js .disclosure-nav li:focus-within noscript + button[aria-expanded="true"]:hover::after, .with-js .disclosure-nav li:focus-within noscript + button[aria-expanded="true"]:focus::after, .with-js .disclosure-nav li:focus-within noscript + button[aria-expanded="true"]::after { border-bottom: 2px solid #013570; border-right: 2px solid #013570; }
+.with-js .disclosure-nav li:focus-within noscript + button[aria-expanded="true"]:hover::after, .with-js .disclosure-nav li:focus-within noscript + button[aria-expanded="true"]:focus::after, .with-js .disclosure-nav li:focus-within noscript + button[aria-expanded="true"]::after { border-bottom: 2px solid white; border-right: 2px solid white; }
 
 /* line 278, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav { background-color: #013570; display: flex; list-style-type: none; padding: 0; margin: 0; flex-direction: column; }
@@ -435,7 +435,7 @@ a:focus { border: 1px dotted grey;
 .with-js .disclosure-nav button[aria-expanded="true"] { background-color: #007FAD; border-bottom-color: #013570; border-right-color: #013570; color: white; border-radius: 2px 2px 0 0; }
 
 /* line 448, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-.disclosure-nav button:hover::after, .disclosure-nav button[aria-expanded="true"]::after { border-bottom: 2px solid #013570; border-right: 2px solid #013570; }
+.disclosure-nav button:hover::after, .disclosure-nav button[aria-expanded="true"]::after { border-bottom: 2px solid white; border-right: 2px solid white; }
 
 /* line 456, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .disclosure-nav ul { margin-left: -10000px; transition-property: margin-left; transition-duration: 0ms; transition-delay: 0s; }
