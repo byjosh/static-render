@@ -1,0 +1,91 @@
+<!DOCTYPE html><html data-current="post" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Comparing sort algorithm visualisations</title><link rel="stylesheet" href="/assets/main.css"> <script async src="/assets/js/menu.js"></script><link rel="icon" href="/favicon.svg"><link rel="mask-icon" href="/favico.svg" color="#13570"></head><body><header> <a href="#main" class="show-on-focus" tabindex="1">Skip to content</a><h1> <a href="/" tabindex="2">By Josh</a></h1><nav class="site-nav"> <input type="checkbox" id="nav-trigger" class="nav-trigger" /> <label for="nav-trigger"> <span class="menu-icon"> <svg viewBox="0 0 18 15" width="18px" height="15px"><path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" /> </svg> </span> </label><div class="trigger"><ul class="disclosure-nav" aria-roledescription="navigation"><li> <a class="top-level main-link" role="menuitem" href="/" tabindex="0">Home</a></li><li> <a class="top-level main-link" role="menuitem" href="/blog" tabindex="0">Blog</a></li><li> <a class="top-level main-link" role="menuitem" href="/about" tabindex="0">About</a></li><li> <a class="top-level main-link" role="menuitem" href="/contact" tabindex="0">Contact</a></li><li> <a class="top-level main-link" role="menuitem" href="/pandemic-overview" tabindex="0">Pandemic</a> <noscript> <!-- This is to select the button if there is no JS on the page --> </noscript> <button class="menu-button-no-text" type="button" role="menubutton" aria-expanded="true" aria-controls="id_Pandemic" aria-label="More Pandemic pages"></button><ul role="menu" id="id_Pandemic" aria-labelledby="button_Pandemic"><li role="none"> <a href="/pandemic-scientific-papers" role="menuitem" tabindex="0">Scientific papers</a></li><li role="none"> <a href="/pandemic-private-risk-appetite-public-health" role="menuitem" tabindex="0">Risk appetite & public health</a></li><li role="none"> <a href="/asmr-by-vaccination-status" role="menuitem" tabindex="0">ASMR by vaccination status</a></li></ul></li><li> <a class="top-level main-link" role="menuitem" href="/resources" tabindex="0">Resources</a> <noscript> <!-- This is to select the button if there is no JS on the page --> </noscript> <button class="menu-button-no-text" type="button" role="menubutton" aria-expanded="true" aria-controls="id_Resources" aria-label="More Resources pages"></button><ul role="menu" id="id_Resources" aria-labelledby="button_Resources"><li role="none"> <a href="/tech-humour" role="menuitem" tabindex="0">Tech humour</a></li></ul></li><li> <a class="top-level main-link" role="menuitem" href="/do-better" tabindex="0">Do Better</a></li></ul></div></nav></header><main id="main"><h2>Comparing sort algorithm visualisations</h2><time datetime="2022-10-15 22:00:00 +0100"> <small> <strong>15 Oct 2022</strong> by Josh </small> </time><p class="tocskiplink"><a href="#toc-skipped">Skip table of contents</a></p><nav> <details open=""> <summary class="no_toc"><h2 class="toc">Table of Contents</h2></summary><ul id="markdown-toc"><li><a href="#high-level-vs-low-level" id="markdown-toc-high-level-vs-low-level">High-level vs low level</a></li><li><a href="#high-level---visualisation-page-from-david-galles-of-usfca---no-code" id="markdown-toc-high-level---visualisation-page-from-david-galles-of-usfca---no-code">High level - visualisation page from David Galles of USFCA - no code</a></li><li><a href="#low-level---pythontutorcom----step-by-step" id="markdown-toc-low-level---pythontutorcom----step-by-step">Low level - PythonTutor.com - step by step</a></li><li><a href="#comparison" id="markdown-toc-comparison">Comparison</a></li></ul></details></nav><div id="toc-skipped"></div><h2 id="high-level-vs-low-level">High-level vs low level</h2><p>This is some code for a recursive merge sort in Python. In reality of course you would use the built <a href="https://en.wikipedia.org/wiki/Timsort">Timsort algorithm</a> used in the <a href="https://docs.python.org/3/library/functions.html#sorted">sorted builtin function</a>. But for illustrating how a sorting algorithm can be understood this works (Python along with the Python Tutor site for visualisation).</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def merge(output,left,right):
+
+    output_index = 0
+    left_index = 0
+    right_index = 0
+
+    while (left_index &lt; len(left) and right_index &lt; len(right)):
+
+        if(left[left_index] &lt;= right[right_index]):
+            output[output_index] = left[left_index]
+            left_index +=1
+            output_index +=1 #is this right?
+        else:
+            output[output_index] = right[right_index]
+            right_index +=1
+            output_index+=1
+
+    while(left_index &lt; len(left)):
+        output[output_index] = left[left_index]
+        left_index +=1
+        output_index +=1
+
+    while(right_index &lt; len(right)):
+        output[output_index] = right[right_index]
+        right_index +=1
+        output_index +=1
+    return output
+            
+    
+def mergesort(list):
+    if(len(list)&lt;2):
+        return list
+        
+        #split list
+    mid = len(list)//2
+    left = list[:mid]
+    right = list[mid:]
+    mergesort(left)
+    mergesort(right)
+    return merge(list,left,right)
+        
+mergesort([9,7,6,3,4,9,11])
+</code></pre></div></div><p>At the trivial level one can understand from reading the code this is going to go through multiple levels of recursion - with the <code class="language-plaintext highlighter-rouge">mergesort(left)</code> and <code class="language-plaintext highlighter-rouge">mergesort(right)</code> calls. But to see it in action - apart from adding in print/debugger statements there are a couple of ways to understand it.</p><h2 id="high-level---visualisation-page-from-david-galles-of-usfca---no-code">High level - visualisation page from David Galles of USFCA - no code</h2><p>This <a href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html">Data Structure Visualisations page</a> from David Galles at University of San Francisco has sorting algorithms - and the <a href="https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html">merge sort is an option on the sorting algorithm page</a>. And this gives a good overview - including the rather repetitive nature of the algorithm.</p><h2 id="low-level---pythontutorcom----step-by-step">Low level - PythonTutor.com - step by step</h2><p>An alternative is <a href="https://pythontutor.com/">pythontutor.com</a> (from Philip J. Guo of UC San Diego who tells the story of its development in <a href="https://pg.ucsd.edu/publications/Python-Tutor-scalable-sustainable-research-software_UIST-2021.pdf">section 10 of this 2021 paper</a> - and which also works for JavaScript, C, C++ and Java code).</p><h2 id="comparison">Comparison</h2><p>The high level animation is better for a quick overview. The code above produces 231 steps that one clicks through in Python Tutor by comparison. But merge sort seems a good algorithm to demonstrate the utility of Python Tutor being low-level - as one can adapt it to a hybrid merge. Adding the insertion sort seen at the top of the code below and changing <code class="language-plaintext highlighter-rouge">if(len(list)&lt;2)</code> to <code class="language-plaintext highlighter-rouge">if(len(list)&lt;10)</code> the steps are reduced to 69 - from 231 steps. The above-mentioned Timsort is an adapative algorithm using a combination of merge and insertion sort strategies to achieve O(n log(n)) in worst case and O(n) performance in the best case.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def insertionsort(insertionlist):
+    for i in range(1,len(insertionlist)):
+        search_index = i
+        value_for_insertion = insertionlist[i]
+        while search_index &gt; 0 and insertionlist[search_index - 1] &gt; value_for_insertion:
+            insertionlist[search_index] = insertionlist[search_index -1]
+            search_index -= 1
+        insertionlist[search_index] = value_for_insertion
+    return insertionlist
+
+def merge(output,left,right):
+    output_index = 0
+    left_index = 0
+    right_index = 0
+    while (left_index &lt; len(left) and right_index &lt; len(right)):
+        if(left[left_index] &lt;= right[right_index]):
+            output[output_index] = left[left_index]
+            left_index +=1
+            output_index +=1 #is this right?
+        else:
+            output[output_index] = right[right_index]
+            right_index +=1
+            output_index+=1
+    while(left_index &lt; len(left)):
+        output[output_index] = left[left_index]
+        left_index +=1
+        output_index +=1
+    
+    while(right_index &lt; len(right)):
+        output[output_index] = right[right_index]
+        right_index +=1
+        output_index +=1
+    return output
+            
+    
+def mergesort(list):
+    if(len(list)&lt;10):
+        return insertionsort(list)
+        
+        #split list
+    mid = len(list)//2
+    left = list[:mid]
+    right = list[mid:]
+    mergesort(left)
+    mergesort(right)
+    return merge(list,left,right)
+        
+mergesort([9,7,6,3,4,9,11])
+</code></pre></div></div><nav aria-label="Adjacent Posts"><ul><li> <a href="/blog/tea-on-the-british-empire" rel="prev">&laquo; The tea on the British Empire</a></li></ul></nav></main><footer> <small><a href="https://github.com/byjosh/jekyll-netlify-boilerplate-accessible-menu">This is a fork</a> (of <a href="https://github.com/danurbanowicz/jekyll-netlify-boilerplate" rel="noopener">Jekyll Netlify Boilerplate</a> that is maintained by <a href="https://www.danurbanowicz.com" rel="noopener">Dan Urbanowicz</a>).</small></footer><script> document.body.style.setProperty('--scroll', "0rem"); document.body.classList.add("with-js"); window.addEventListener('scroll', () => { var scrollamount = (window.pageYOffset / (window.innerHeight * 0.1)); var scroll = "0rem"; if (scrollamount > 0 && scrollamount < 1) { scroll = (scrollamount) + "rem"; } if (scrollamount > 1) { scroll = "1rem"; } document.body.style.setProperty('--scroll', scroll); }, false); </script></body></html>
