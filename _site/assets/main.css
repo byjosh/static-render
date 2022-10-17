@@ -168,45 +168,49 @@ td, th { padding: 0; }
 /* line 3, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, button, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
-/* line 24, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
+/* line 93, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
 * { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-/* line 29, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
+/* line 98, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
 * :before, * :after { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-/* line 34, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
+/* line 104, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
 input, textarea, button, select, label, a { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); outline: none; }
 
-/* line 44, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
+/* line 114, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
 ul, ol, dl { list-style: none; }
 
-/* line 50, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
+/* line 120, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
 em { font-style: italic; }
 
-/* line 54, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
+/* line 124, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
 body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-/* line 59, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
+/* line 129, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
 img { display: block; width: 100%; max-width: 100%; height: auto; }
 
-/* line 66, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
-pre { background-color: #f3f3f3; border-radius: 0.3rem; padding: 1rem; }
+/* line 136, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
+pre { background-color: #c6c6c6; border-radius: 0.3rem; padding: 1rem; }
 
-/* line 72, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
-code { background-color: #f3f3f3; padding: 0.2rem 0.4rem; }
+/** rouge used instead
+code {
+	background-color: $grey-bg-color; padding: 0.2rem 0.4rem;
+} */
+/* line 147, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
+code.highlighter-rouge { background-color: #c6c6c6; }
 
-/* line 77, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
+/* line 151, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
 ::selection { background-color: rgba(255, 255, 100, 0.5); }
 
-/* line 81, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
+/* line 155, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
 input, textarea { border: 0.05em solid #e6e6e6; }
-/* line 84, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
+/* line 159, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
 input:focus, textarea:focus { border: 0.05em solid #282828; }
 
-/* line 89, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
+/* line 164, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
 textarea { vertical-align: top; resize: vertical; max-width: 100%; }
 
-/* line 95, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
+/* line 170, /Users/auser/Documents/a_blog/_sass/partials/_utilities.scss */
 button { font-weight: 600; padding: 2rem; line-height: 1.5; color: white; background-color: #00729a; border: 3px solid #00729a; }
 
 /* line 5, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
@@ -244,24 +248,28 @@ h2 { font-size: 1.5rem; padding-bottom: 1rem; }
 /* line 89, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
 h3 { font-size: 1.35rem; }
 
-/* line 93, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
-code { font-family: Courier, monospace; font-size: 1.2rem; color: #282828; }
+/** rouge used instead
+code { font-family: $code-font; font-size: 1.2rem; color: $text-color;
+}
+*/
+/* line 100, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
+code { font-family: Courier, monospace; }
 
-/* line 99, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
+/* line 104, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
 strong { font-weight: 600; }
 
-/* line 103, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
+/* line 108, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
 small { font-size: 1.2rem; }
 
-/* line 107, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
+/* line 112, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
 a, a:visited { border-bottom: 0.05em solid #00729a; text-decoration: none; color: #00729a; }
 
-/* line 114, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
+/* line 119, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
 a:hover, a:active { text-decoration: none; border: 0; color: #00394e; }
 
-/* line 121, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
+/* line 126, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
 header > h1 { line-height: 1.5; font-weight: 300; }
-@media screen and (min-width: 768px) { /* line 121, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
+@media screen and (min-width: 768px) { /* line 126, /Users/auser/Documents/a_blog/_sass/partials/_typography.scss */
   header > h1 { text-align: left; } }
 
 /* This document includes material derived from
@@ -340,7 +348,7 @@ html[data-current="contact"] main > form button { width: 100%; }
 @supports (display: grid) { /* line 201, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
   html[data-current="contact"] main > form input, html[data-current="contact"] main > form textarea, html[data-current="contact"] main > form button { width: auto; max-width: none; } }
 /* line 210, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-footer { grid-column: full; display: grid; grid-template-columns: [full-start] minmax(1rem, 1fr) [main-start] minmax(0, 50rem) [main-end] minmax(1rem, 1fr) [full-end]; background-color: #f3f3f3; }
+footer { grid-column: full; display: grid; grid-template-columns: [full-start] minmax(1rem, 1fr) [main-start] minmax(0, 50rem) [main-end] minmax(1rem, 1fr) [full-end]; background-color: #c6c6c6; }
 /* line 217, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 footer > small { grid-column: main; }
 
@@ -667,3 +675,255 @@ input#tags-showall:checked ~ label.tag-label, input#categories-showall:checked ~
 
 /* line 212, /Users/auser/Documents/a_blog/_sass/partials/_categories.scss */
 input#tags-showall:checked ~ .alltags ul.blogroll.tags, input#tags-showall:checked ~ .alltags ul.blogroll.categories, input#categories-showall:checked ~ .allcategories ul.blogroll.tags, input#categories-showall:checked ~ .allcategories ul.blogroll.categories { display: block; }
+
+/* line 5, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight pre { background-color: #272822; }
+
+/* line 9, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .hll { background-color: #272822; }
+
+/* line 13, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .c { color: lightgreen; }
+
+/* Comment */
+/* line 18, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .err { color: #960050; background-color: #1e0010; }
+
+/* Error */
+/* line 24, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .k { color: #66d9ef; }
+
+/* Keyword */
+/* line 29, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .l { color: #ae81ff; }
+
+/* Literal */
+/* line 34, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .n { color: #f8f8f2; }
+
+/* Name */
+/* line 39, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .o { color: #f92672; }
+
+/* Operator */
+/* line 44, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .p { color: #f8f8f2; }
+
+/* Punctuation */
+/* line 49, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .cm { color: lightgreen; }
+
+/* Comment.Multiline */
+/* line 54, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .cp { color: lightgreen; }
+
+/* Comment.Preproc */
+/* line 59, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .c1 { color: lightgreen; }
+
+/* Comment.Single */
+/* line 64, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .cs { color: lightgreen; }
+
+/* Comment.Special */
+/* line 69, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .ge { font-style: italic; }
+
+/* Generic.Emph */
+/* line 74, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .gs { font-weight: bold; }
+
+/* Generic.Strong */
+/* line 79, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .kc { color: #66d9ef; }
+
+/* Keyword.Constant */
+/* line 84, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .kd { color: #66d9ef; }
+
+/* Keyword.Declaration */
+/* line 89, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .kn { color: #f92672; }
+
+/* Keyword.Namespace */
+/* line 94, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .kp { color: #66d9ef; }
+
+/* Keyword.Pseudo */
+/* line 99, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .kr { color: #66d9ef; }
+
+/* Keyword.Reserved */
+/* line 104, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .kt { color: #66d9ef; }
+
+/* Keyword.Type */
+/* line 109, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .ld { color: #e6db74; }
+
+/* Literal.Date */
+/* line 114, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .m { color: #ae81ff; }
+
+/* Literal.Number */
+/* line 119, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .s { color: #e6db74; }
+
+/* Literal.String */
+/* line 124, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .na { color: #a6e22e; }
+
+/* Name.Attribute */
+/* line 129, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .nb { color: #f8f8f2; }
+
+/* Name.Builtin */
+/* line 134, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .nc { color: #a6e22e; }
+
+/* Name.Class */
+/* line 139, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .no { color: #66d9ef; }
+
+/* Name.Constant */
+/* line 144, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .nd { color: #a6e22e; }
+
+/* Name.Decorator */
+/* line 149, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .ni { color: #f8f8f2; }
+
+/* Name.Entity */
+/* line 154, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .ne { color: #a6e22e; }
+
+/* Name.Exception */
+/* line 159, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .nf { color: #a6e22e; }
+
+/* Name.Function */
+/* line 164, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .nl { color: #f8f8f2; }
+
+/* Name.Label */
+/* line 169, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .nn { color: #f8f8f2; }
+
+/* Name.Namespace */
+/* line 174, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .nx { color: #a6e22e; }
+
+/* Name.Other */
+/* line 179, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .py { color: #f8f8f2; }
+
+/* Name.Property */
+/* line 184, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .nt { color: #f92672; }
+
+/* Name.Tag */
+/* line 189, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .nv { color: #f8f8f2; }
+
+/* Name.Variable */
+/* line 194, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .ow { color: #f92672; }
+
+/* Operator.Word */
+/* line 199, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .w { color: #f8f8f2; }
+
+/* Text.Whitespace */
+/* line 204, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .mf { color: #ae81ff; }
+
+/* Literal.Number.Float */
+/* line 209, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .mh { color: #ae81ff; }
+
+/* Literal.Number.Hex */
+/* line 214, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .mi { color: #ae81ff; }
+
+/* Literal.Number.Integer */
+/* line 219, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .mo { color: #ae81ff; }
+
+/* Literal.Number.Oct */
+/* line 224, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .sb { color: #e6db74; }
+
+/* Literal.String.Backtick */
+/* line 229, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .sc { color: #e6db74; }
+
+/* Literal.String.Char */
+/* line 234, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .sd { color: #e6db74; }
+
+/* Literal.String.Doc */
+/* line 239, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .s2 { color: #e6db74; }
+
+/* Literal.String.Double */
+/* line 244, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .se { color: #ae81ff; }
+
+/* Literal.String.Escape */
+/* line 249, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .sh { color: #e6db74; }
+
+/* Literal.String.Heredoc */
+/* line 254, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .si { color: #e6db74; }
+
+/* Literal.String.Interpol */
+/* line 259, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .sx { color: #e6db74; }
+
+/* Literal.String.Other */
+/* line 264, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .sr { color: #e6db74; }
+
+/* Literal.String.Regex */
+/* line 269, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .s1 { color: #e6db74; }
+
+/* Literal.String.Single */
+/* line 274, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .ss { color: #e6db74; }
+
+/* Literal.String.Symbol */
+/* line 279, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .bp { color: #f8f8f2; }
+
+/* Name.Builtin.Pseudo */
+/* line 284, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .vc { color: #f8f8f2; }
+
+/* Name.Variable.Class */
+/* line 289, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .vg { color: #f8f8f2; }
+
+/* Name.Variable.Global */
+/* line 294, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .vi { color: #f8f8f2; }
+
+/* Name.Variable.Instance */
+/* line 299, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .il { color: #ae81ff; }
+
+/* Literal.Number.Integer.Long */
+/* Generic Heading & Diff Header */
+/* line 308, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .gu { color: #75715e; }
+
+/* Generic.Subheading & Diff Unified/Comment? */
+/* line 313, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .gd { color: #f92672; }
+
+/* Generic.Deleted & Diff Deleted */
+/* line 318, /Users/auser/Documents/a_blog/_sass/partials/_monokai.scss */
+.highlight .gi { color: #a6e22e; }
+
+/* Generic.Inserted & Diff Inserted */
