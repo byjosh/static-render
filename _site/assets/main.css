@@ -579,24 +579,28 @@ h2.toc { font-size: 1.5rem; padding-bottom: 1rem; }
 .blogroll > li h2, .blogroll > li h3, .blogroll > li h4 { padding-top: 0; }
 
 /* line 811, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
-.category-page { list-style: none; display: flex; flex-wrap: wrap; justify-content: space-between; }
+.category-page { list-style: none; display: flex; flex-wrap: wrap; justify-content: flex-start; }
+/* line 817, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+.category-page li { margin-right: 1rem; }
+/* line 820, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+.category-page li h4 { padding: 0.3rem 0; }
 
-/* line 819, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 828, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 ul.post-categories { list-style: none; display: flex; flex-wrap: wrap; padding: 0; margin: 0; font-size: smaller; }
-/* line 827, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 836, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 ul.post-categories li { padding: 0 10px 0 0px; }
 
-/* line 832, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 841, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 blockquote { font-family: Courier, monospace; font-size: 1.2rem; color: #282828; background-color: #f3f3f3; padding: 0.2rem 0.8rem; }
 
-/* line 840, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 849, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 .totop { font-size: 1rem; padding-top: 1rem; margin-bottom: 2rem; }
 
-/* line 849, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 858, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 table.knowledgegrid th, table.knowledgegrid td { padding: 10px; text-align: center; border: 1px solid black; }
-/* line 856, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 865, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 table.knowledgegrid .bad { background-color: red; }
-/* line 860, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
+/* line 869, /Users/auser/Documents/a_blog/_sass/partials/_app.scss */
 table.knowledgegrid .tough { background-color: yellow; }
 
 /* line 1, /Users/auser/Documents/a_blog/_sass/partials/_categories.scss */
